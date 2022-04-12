@@ -40,13 +40,22 @@ public class LoadingDialog extends BaseDialogFragment{
     }
 
     public void setContent(String title){
-        this.title=title;
+        if(!TextUtils.isEmpty(title)&&content!=null){
+            this.title=title;
+            content.setText(title);
+        }else {
+            throw new NullPointerException("请先初始化控件");
+        }
     }
 
     private LoadingDialog() {
+
     }
 
 
+    private Boolean isShowing(){
+       return getDialog().isShowing();
+    }
 
     @Override
     protected boolean getCanceledOnTouchOutside() {
@@ -56,6 +65,9 @@ public class LoadingDialog extends BaseDialogFragment{
     public void showLoading(@NonNull FragmentManager manager, @Nullable String tag, String...msg) {
         if(msg.length>0){
             this.title=msg[0];
+            if(content!=null&&!TextUtils.isEmpty(title)){
+                content.setText(title);
+            }
         }
         try {
             //在每个add事务前增加一个remove事务，防止连续的add

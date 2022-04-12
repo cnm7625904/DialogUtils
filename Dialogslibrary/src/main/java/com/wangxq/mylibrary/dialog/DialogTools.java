@@ -46,5 +46,15 @@ public enum DialogTools {
     public void dismissCommonDialog(){
         NoticeDialog.getCommonDialog().dismiss();
     }
+    /**
+     * 设置展示框
+     * @param
+     */
+    public void updateLoadingContent( String msg){
+        LoadingDialog.getLoadingDialog().setContent(msg);
+    }
 
+    public Boolean loadingDialogIsShowing(){
+        return !(LoadingDialog.getLoadingDialog().getDialog()== null||!LoadingDialog.getLoadingDialog().getDialog().isShowing());
+    }
 }
