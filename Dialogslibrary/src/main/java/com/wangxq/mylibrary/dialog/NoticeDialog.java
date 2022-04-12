@@ -102,7 +102,7 @@ public  class NoticeDialog extends BaseDialogFragment {
 
 
 
-    public NoticeDialog() {}
+    private NoticeDialog() {}
 
     @SuppressLint("ValidFragment")
     public NoticeDialog(Builder builder) {

@@ -43,7 +43,7 @@ public class LoadingDialog extends BaseDialogFragment{
         this.title=title;
     }
 
-    public LoadingDialog() {
+    private LoadingDialog() {
     }
 
 

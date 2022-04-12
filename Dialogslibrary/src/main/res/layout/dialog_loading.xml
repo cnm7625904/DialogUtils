@@ -7,22 +7,25 @@
     >
 
     <ProgressBar
+        android:layout_centerHorizontal="true"
         android:id="@+id/pb"
-        android:layout_centerInParent="true"
         android:layout_width="60dp"
-        android:layout_height="62dp"/>
+        android:layout_height="62dp"
+        android:layout_marginTop="30dp"
+        />
 
 
             <TextView
-                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_below="@+id/pb"
                 android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|center_horizontal"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="3dp"
                 android:text="加载中..."
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="18sp"
 
                 android:enabled="true"

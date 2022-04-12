@@ -94,7 +94,11 @@ public abstract class BaseDialogFragment extends DialogFragment {
         if (window == null || getContext() == null) {
             return;
         }
-        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        //设置全部半透明
+//        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        WindowManager.LayoutParams layoutParams = window.getAttributes();
+        layoutParams.dimAmount = 0.0f;
+
         // 设置上下左右的边距，如果都设置0并且height和width都设置MATCH_PARENT，布局会充满整个屏幕
         window.getDecorView().setPadding(30, 30, 30, 30);
         window.setAttributes(getLayoutParams(window.getAttributes()));
