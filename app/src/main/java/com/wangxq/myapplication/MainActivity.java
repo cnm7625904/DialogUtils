@@ -15,12 +15,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        DialogTools.INSTANCE.showCommomDialog(getSupportFragmentManager(),new NoticeDialog.Builder());
-//        DialogTools.INSTANCE.showCommomDialog(getSupportFragmentManager(),new NoticeDialog.Builder());
-//        DialogTools.INSTANCE.showCommomDialog(getSupportFragmentManager(),new NoticeDialog.Builder());
         DialogTools.INSTANCE.showLoading(getSupportFragmentManager(),"加载中...");
-//        DialogTools.INSTANCE.showLoading(getSupportFragmentManager());
-//        DialogTools.INSTANCE.showLoading(getSupportFragmentManager());
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
